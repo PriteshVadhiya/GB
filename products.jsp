@@ -79,9 +79,9 @@ ResultSet resultSet = null;
 <!-- table start-->
 
 <center> <h2 class="heading">Products</h2></center>
-  <div class="container">
-  	<div class="row" style="border:2px;">
-      <div class="col-md-3" style="border: 2px solid gray;
+  <div class="container" >
+  	<div class="row" >
+      <div class="col-md-3"  style="border: 2px solid gray;
     border-radius: 5px;">
 		<form action="" method="POST">
 		  <div><h3><b style="color: #0000ff;">Filter</b></h3></div>
@@ -184,8 +184,10 @@ ResultSet resultSet = null;
 				</div>
 		</form>
         </div>
+      
+       
 <!-- card start -->
-
+<div id="side">
  <%
 try{ 
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -207,9 +209,7 @@ else{
 
 while(resultSet.next()){
 %>
-<div id="card_area" >
-		
-
+<div style="margin-left:30px; width:140%">
 		<div class="w3-card-4" style="margin-bottom:30px;">
 		
 		<div class="w3-container w3-light-gray w3-hover-black">
@@ -305,7 +305,7 @@ while(resultSet.next()){
 e.printStackTrace();
 }
 %>
-
+ </div>
 </div><!--  end col-md-9 -->
 </div><!-- end row -->
 
